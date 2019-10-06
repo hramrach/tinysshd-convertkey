@@ -4,7 +4,7 @@
 #  the LICENSE file, which shall be included in all copies
 #  and redistributions of this project.
 
-name='tinyssh-convert'
+name='tinysshd-convertkey'
 
 say() { X=$1; Y=$2; shift 2; printf "\e[1m$X\e[0m  $Y\n" "$@"; }
 err() { >&2 say 'ERR!' "$1"; exit 1; }

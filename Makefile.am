@@ -1,5 +1,5 @@
-bin_PROGRAMS = tinyssh-convert
-tinyssh_convert_SOURCES = tinyssh-convert.c \
+bin_PROGRAMS = tinysshd-convertkey
+tinysshd_convertkey_SOURCES = tinysshd-convertkey.c \
 													base64.h base64.c \
 													buffer.h buffer.c \
 													fileio.h fileio.c \

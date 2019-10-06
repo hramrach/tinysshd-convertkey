@@ -3,9 +3,9 @@
 AC_PREREQ(2.69)
 
 # This project.
-AC_INIT(tinyssh-convert, 0.2, [], [], [m4_esyscmd_s([git ls-remote --get-url])])
+AC_INIT(tinysshd-convertkey, 0.2, [], [], [m4_esyscmd_s([git ls-remote --get-url])])
 AC_DEFINE([GITCOMMIT], ["m4_esyscmd_s([git rev-parse --short HEAD])"])
-AC_CONFIG_SRCDIR(tinyssh-convert.c)
+AC_CONFIG_SRCDIR(tinysshd-convertkey.c)
 AC_CONFIG_AUX_DIR(autotools)
 AC_CONFIG_FILES(Makefile)
 AM_INIT_AUTOMAKE(foreign no-dist no-exeext subdir-objects)
