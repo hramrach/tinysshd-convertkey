@@ -1,0 +1,19 @@
+Source: tinysshd-convertkey
+Section: net
+Priority: optional
+Maintainer: Michal Suchánek <msuchanek@suse.de>
+Build-Depends: debhelper (>= 9), autotools-dev
+Standards-Version: 3.9.5
+Homepage: https://github.com/hramrach/tinysshd-convertkey
+#Vcs-Git: https://github.com/hramrach/tinysshd-convertkey.git
+#Vcs-Browser: https://github.com/hramrach/tinysshd-convertkey
+
+Package: tinysshd-convertkey
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Enhances: tinysshd
+Description: Utility to convert OpenSSH keys for TinySSH
+ Key format conversion tool for TinySSH.
+ .
+ Useful for migration from OpenSSH to TinySSH or for using TinySSH in initrd and
+ OpenSSH on the running system.
