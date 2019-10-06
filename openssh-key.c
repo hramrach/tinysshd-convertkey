@@ -196,8 +196,8 @@ int opensshkey_save_to_tinyssh (const struct opensshkey *key, const unsigned cha
     strncat(seckey_file, dir, 1023);
     /* if last character is not a slash, append it */
     if (strncmp(seckey_file + strlen(seckey_file) - 1, "/", 1) != 0) {
-        strncat(pubkey_file, "/", 1);
-        strncat(seckey_file, "/", 1);
+        strncat(pubkey_file, "/", 2);
+        strncat(seckey_file, "/", 2);
     }
 
     /* decide by key type */
