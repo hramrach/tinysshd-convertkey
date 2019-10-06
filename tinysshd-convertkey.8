@@ -1,0 +1,56 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" (C) Copyright 2019 Michal Suchánek <msuchanek@suse.de>,
+
+.TH TINYSSHD-CONVERTKEY 8 "October  6, 2019"
+
+.SH NAME
+tinysshd-convertkey \- utility to convert 
+existing
+.B ed25519
+keys from
+.B OpenSSH
+format to the
+.B TinySSH
+format.
+.SH SYNOPSIS
+.B tinysshd-convertkey
+.RI [-hv]
+.RI [-f " keyfile"]
+.RI [-d " destination_dir"]
+.br
+.SH OPTIONS
+.TP
+.B \-d
+Source
+.B OpenSSH
+keyfile. Provided interactively if not specified on commandline.
+.TP
+.B \-f
+Destination directory for saving
+.B TinySSH
+key files. Provided interactively if not specified on commandline.
+.TP
+.B \-h
+Show summary of options.
+.TP
+.B \-v
+Show version of program.
+.SH DESCRIPTION
+.PP
+The conversion enables OpenSSH and TinySSH to run with an identical set of keys,
+thus presenting an identical fingerprint upon connection. This avoids warnings
+of changed hostkeys when connecting to the same IP.
+.PP
+A possible usage scenario would be a server with an encrypted root device which
+needs to be [unlocked remotely]. The initramfs can run a copy of TinySSH and
+provide means to enter a passphrase remotely via ssh.
+
+.SH SEE ALSO
+
+.BR tinysshd(8)
+.PP Python reimplementation
+.B https://github.com/ansemjo/tinyssh-keyconvert
+.PP ed25519
+.B https://ed25519.cr.yp.to/
+.PP unlocked remotely
+.B https://wiki.archlinux.org/index.php/Dm-crypt/Specialties#Remote_unlocking_.28hooks:_netconf.2C_dropbear.2C_tinyssh.2C_ppp.29
